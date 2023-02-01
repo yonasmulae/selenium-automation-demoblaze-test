@@ -1,6 +1,6 @@
 import requests
 import allure
-from Server.Api.web.api_login_locators import Login_api_locators
+from Server.Api.Constants.login_constants import Login_api_locators
 
 
 class Test_login_api:

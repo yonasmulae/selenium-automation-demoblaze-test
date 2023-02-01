@@ -1,6 +1,6 @@
 import requests
 import allure
-from Server.Api.web.api_signup_locator_ import Signup_api_locators
+from Server.Api.Constants.signup_constants_ import Signup_api_locators
 
 
 class Test_signup_api:

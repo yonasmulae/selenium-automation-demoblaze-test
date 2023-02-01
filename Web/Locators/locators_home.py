@@ -9,7 +9,7 @@ class Home_locator:
     catagories_monitors_xpath = "//a[contains(text(),'Monitors')]"
     phone_nexus_6_xpath = "//a[contains(text(),'Nexus 6')]"
     laptop_sony_vaio_i7 = "//a[contains(text(),'Sony vaio i7')]"
-    monitor_apple_monitor_24 = "//a[contains(text(),'Apple monitor 24')]"
+    monitor_apple_monitor_24 = "//*[@id='tbodyid']/div[1]/div/div/h4/a"
     add_to_cart_xpath = "//a[contains(text(),'Add to cart')]"
     about_us_text = "//p[contains(text(),'We believe performance needs to be validated at ev')]"
     get_in_touch = "/html[1]/body[1]/div[6]/div[1]/div[1]/div[1]/div[1]/p[1]"
