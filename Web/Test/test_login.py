@@ -2,7 +2,7 @@ import time
 import allure
 import pytest
 from Web.Pages.login_page import Login
-from Utils.base import Base
+from Main.base import Base
 from Web.Locators.locators_login import login_locator
 
 

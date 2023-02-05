@@ -3,7 +3,7 @@ import allure
 import pytest
 
 from Web.Pages.home_page import Home
-from Utils.base import Base
+from Main.base import Base
 from Web.Locators.locators_home import Home_locator
 
 

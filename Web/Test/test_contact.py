@@ -3,7 +3,7 @@ import allure
 import pytest
 
 from Web.Pages.contact_page import Contact
-from Utils.base import Base
+from Main.base import Base
 from Web.Locators.locators_contact import Contact_locator
 
 

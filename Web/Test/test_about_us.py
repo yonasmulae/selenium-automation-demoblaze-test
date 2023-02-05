@@ -3,7 +3,7 @@ import allure
 import pytest
 
 from Web.Pages.about_us_page import About_us
-from Utils.base import Base
+from Main.base import Base
 from Web.Locators.locators_about_us import About_us_locator
 
 

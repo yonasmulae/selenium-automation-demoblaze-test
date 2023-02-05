@@ -3,7 +3,7 @@ import allure
 import pytest
 from Web.Pages.home_page import Home
 from Web.Pages.cart_page import Cart
-from Utils.base import Base
+from Main.base import Base
 from Web.Locators.locator_cart import Cart_locator
 
 
