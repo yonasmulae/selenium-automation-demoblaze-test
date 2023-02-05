@@ -17,10 +17,7 @@ class Test_login(Base, login_locator):
         self.click.click_login_link()
         time.sleep(2)
         title = self.driver.title
-        if title == "STORE":
-            assert True
-        else:
-            assert False
+        assert title == "STORE"
         super().tear_down()
 
     @allure.description("Login user test with all valid fields")
@@ -38,10 +35,7 @@ class Test_login(Base, login_locator):
         self.login_page.click_login()
         time.sleep(2)
         title = self.driver.title
-        if title == "STORE":
-            assert True
-        else:
-            assert False
+        assert title == "STORE"
         super().tear_down()
 
     @allure.description("Login user with correct username and incorrect password")
@@ -111,12 +105,10 @@ class Test_login(Base, login_locator):
         time.sleep(2)
         self.login_page.click_login()
         time.sleep(2)
-        title = self.driver.title
+        popup = self.driver.switch_to.alert.text
+        assert popup == "User does not exist."
+        self.driver.switch_to.alert.accept()
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Login box close button test")
     @pytest.mark.sanity
@@ -132,8 +124,5 @@ class Test_login(Base, login_locator):
         self.login_page.click_close()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False

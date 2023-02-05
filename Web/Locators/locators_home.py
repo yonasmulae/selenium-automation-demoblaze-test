@@ -16,6 +16,20 @@ class Home_locator:
     product_store_logo = "//body/div[@id='footc']/div[@id='fotcont']/div[3]/div[1]/div[1]/h4[1]/img[1]"
     scroll_down_1 = "window.scrollBy(0,400)"
     scroll_down_2 = "window.scrollBy(0,800)"
+    p = "//body/div[@id='contcont']/div[1]/div[2]"
+    d = "a"
+
+    a1 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[1]"
+    a2 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[2]"
+    a3 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[3]"
+    a4 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[4]"
+    a5 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[5]"
+    a6 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[6]"
+    a7 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[7]"
+    a8 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[8]"
+    a9 = "//body/div[@id='contcont']/div[1]/div[2]/div[1]/div[9]"
+    t = "a"
+
 
 
 

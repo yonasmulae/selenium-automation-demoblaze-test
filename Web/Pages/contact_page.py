@@ -23,7 +23,7 @@ class Contact(Contact_locator):
         self.driver.find_element(By.XPATH, self.contact_message_xpath).send_keys(contact_messgae)
 
     def click_contact_send_messgae_button(self):
-        self.driver.find_element(By.XPATH, self.contact_message_xpath).click()
+        self.driver.find_element(By.XPATH, self.send_message_button_xpath).click()
 
     def click_contact_close_button(self):
-        self.driver.find_element(By.XPATH, self.contact_email_xpath).click()
+        self.driver.find_element(By.XPATH, self.close_button_xpath).click()

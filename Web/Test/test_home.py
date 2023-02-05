@@ -1,6 +1,7 @@
 import time
 import allure
 import pytest
+
 from Web.Pages.home_page import Home
 from Utils.base import Base
 from Web.Locators.locators_home import Home_locator
@@ -18,11 +19,8 @@ class Test_home(Base, Home_locator):
         self.refresh.click_homepage_button()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage slider view previous button clicked or not test")
     @pytest.mark.sanity
@@ -34,11 +32,8 @@ class Test_home(Base, Home_locator):
         self.previous.click_homepage_previous_button()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage slider view next button clicked or not test")
     @pytest.mark.sanity
@@ -50,11 +45,8 @@ class Test_home(Base, Home_locator):
         self.next.click_homepage_next_button()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage categories phone button click or not test")
     @pytest.mark.sanity
@@ -66,11 +58,8 @@ class Test_home(Base, Home_locator):
         self.phone.click_catagories_phone_button()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage categories phone product clicked or not test")
     @pytest.mark.sanity
@@ -82,11 +71,8 @@ class Test_home(Base, Home_locator):
         self.product.click_phone_product()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage categories phone product added to cart or not test")
     @pytest.mark.sanity
@@ -115,11 +101,8 @@ class Test_home(Base, Home_locator):
         self.phone.click_catagories_laptop_button()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage categories laptop product is clicked or not test")
     @pytest.mark.sanity
@@ -131,11 +114,8 @@ class Test_home(Base, Home_locator):
         self.product.click_laptop_product()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage categories laptop product is clicked or not test")
     @pytest.mark.sanity
@@ -164,11 +144,8 @@ class Test_home(Base, Home_locator):
         self.phone.click_catagories_monitors_button()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage categories monitors product clicked or not test")
     @pytest.mark.sanity
@@ -180,11 +157,8 @@ class Test_home(Base, Home_locator):
         self.product.click_monitors_product()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("Homepage categories monitors product added to cart or not test")
     @pytest.mark.sanity
@@ -213,44 +187,25 @@ class Test_home(Base, Home_locator):
         self.footer_page.check_footer_page()
         time.sleep(2)
         title = self.driver.title
-        if title == "STORE":
-            assert True
-        else:
-            assert False
+        assert title == "STORE"
         super().tear_down()
 
-    # @allure.description("Homepage footer page about_us text is presented or not test")
-    # @pytest.mark.sanity
-    # def test_if_the_footer_page_about_us_text_is_presented(self):
+    # def test_yo(self):
     #     self.driver = super().init()
     #     time.sleep(2)
     #     self.footer_page = Home(self.driver)
     #     time.sleep(2)
-    #     self.footer_page.check_footer_page_about_us()
-    #     title = self.driver.title
-    #     if title == "STORE":
-    #         assert True
-    #     else:
-    #         assert False
-    #     super().tear_down()
+    #     p = self.driver.find_element(By.XPATH, self.p)
+    #     d = p.find_elements(By.TAG_NAME, self.d)
     #
-    # @allure.description("Homepage footer page get in touch information is presented or not test")
-    # @pytest.mark.sanity
-    # def test_if_the_footer_page_about_us_text_is_presented(self):
-    #     self.driver = super().init()
-    #     time.sleep(2)
-    #     self.footer_page = Home(self.driver)
-    #     time.sleep(2)
-    #     self.footer_page.check_footer_page_about_us()
-    #     title = self.driver.title
-    #     if title == "STORE":
-    #         assert True
-    #     else:
-    #         assert False
+    #     l = 0
+    #     for x in d(range(6)):
+    #         l += 1
+    #         time.sleep(2)
+    #         x.click()
+    #         time.sleep(2)
+    #
+    #         break
     #     super().tear_down()
-
-
-
-
 
 

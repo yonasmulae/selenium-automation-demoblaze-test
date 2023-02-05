@@ -5,7 +5,7 @@ class Contact_locator:
     contact_email_xpath = "//input[@id='recipient-email']"
     contact_name_xpath = "//input[@id='recipient-name']"
     contact_message_xpath = "//textarea[@id='message-text']"
-    send_message_butoon_xpath = "//button[contains(text(),'Send message')]"
+    send_message_button_xpath = "//button[contains(text(),'Send message')]"
     close_button_xpath = "//body/div[@id='exampleModal']/div[1]/div[1]/div[3]/button[1]"
     contact_email = "qataster67@gmail.com"
     contact_name = "yonas"

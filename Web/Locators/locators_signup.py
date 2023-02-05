@@ -7,7 +7,7 @@ class Sign_up_locator:
     sign_up_password_xpath = "//input[@id='sign-password']"
     sign_up_button = "//button[contains(text(),'Sign up')]"
     close_button = "//body/div[@id='signInModal']/div[1]/div[1]/div[3]/button[1]"
-    username = "hahaha@gmail.com"
+    username = "yo1234@gmail.com"
     password = "121212"
     empty_username = ""
     empty_password = ""

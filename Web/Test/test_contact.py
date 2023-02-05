@@ -20,10 +20,7 @@ class Test_contact(Base, Contact_locator):
         time.sleep(2)
         title = self.driver.title
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
+        assert title == "STORE"
 
     @allure.description("contact send message with correct email, name and message clicked or not test")
     @pytest.mark.sanity
@@ -40,12 +37,12 @@ class Test_contact(Base, Contact_locator):
         time.sleep(2)
         self.contact.click_contact_message(self.contact_message)
         time.sleep(2)
-        title = self.driver.title
+        self.contact.click_contact_send_messgae_button()
+        time.sleep(2)
+        popup = self.driver.switch_to.alert.text
+        assert popup == "Thanks for the message!!"
+        self.driver.switch_to.alert.accept()
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("contact send message with incorrect email name and message clicked or not test")
     @pytest.mark.sanity
@@ -62,12 +59,12 @@ class Test_contact(Base, Contact_locator):
         time.sleep(2)
         self.contact.click_contact_message(self.invalid_contact_message)
         time.sleep(2)
-        title = self.driver.title
+        self.contact.click_contact_send_messgae_button()
+        time.sleep(2)
+        popup = self.driver.switch_to.alert.text
+        assert popup == "invalid contact email and name"
+        self.driver.switch_to.alert.accept()
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("contact send message with blank email name and message clicked or not test")
     @pytest.mark.sanity
@@ -84,12 +81,12 @@ class Test_contact(Base, Contact_locator):
         time.sleep(2)
         self.contact.click_contact_message(self.empty_contact_message)
         time.sleep(2)
-        title = self.driver.title
+        self.contact.click_contact_send_messgae_button()
+        time.sleep(2)
+        popup = self.driver.switch_to.alert.text
+        assert popup == "please fill out email, name and message"
+        self.driver.switch_to.alert.accept()
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("contact send message with correct email, empty name and message clicked or not test")
     @pytest.mark.sanity
@@ -106,12 +103,12 @@ class Test_contact(Base, Contact_locator):
         time.sleep(2)
         self.contact.click_contact_message(self.empty_contact_message)
         time.sleep(2)
-        title = self.driver.title
+        self.contact.click_contact_send_messgae_button()
+        time.sleep(2)
+        popup = self.driver.switch_to.alert.text
+        assert popup == "please fill out name and message"
+        self.driver.switch_to.alert.accept()
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("contact send message with valid email and name and blank message clicked or not test")
     @pytest.mark.sanity
@@ -128,12 +125,12 @@ class Test_contact(Base, Contact_locator):
         time.sleep(2)
         self.contact.click_contact_message(self.empty_contact_message)
         time.sleep(2)
-        title = self.driver.title
+        self.contact.click_contact_send_messgae_button()
+        time.sleep(2)
+        popup = self.driver.switch_to.alert.text
+        assert popup == "please fill out message"
+        self.driver.switch_to.alert.accept()
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("contact send message with valid email and message empty name clicked or not test")
     @pytest.mark.sanity
@@ -150,12 +147,12 @@ class Test_contact(Base, Contact_locator):
         time.sleep(2)
         self.contact.click_contact_message(self.contact_message)
         time.sleep(2)
-        title = self.driver.title
+        self.contact.click_contact_send_messgae_button()
+        time.sleep(2)
+        popup = self.driver.switch_to.alert.text
+        assert popup == "please fill out name"
+        self.driver.switch_to.alert.accept()
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
 
     @allure.description("contact send message with valid email and message empty name clicked or not test")
     @pytest.mark.sanity
@@ -175,9 +172,7 @@ class Test_contact(Base, Contact_locator):
         self.contact.click_contact_close_button()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False
+
 

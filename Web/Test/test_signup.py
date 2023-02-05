@@ -103,7 +103,7 @@ class Test_Sign_up(Base, Sign_up_locator):
         self.sign_up.click_sign_up()
         time.sleep(2)
         popup = self.driver.switch_to.alert.text
-        assert popup == "This user already exist."
+        assert popup == "invalid username and password"
         self.driver.switch_to.alert.accept()
         super().tear_down()
 
@@ -117,8 +117,5 @@ class Test_Sign_up(Base, Sign_up_locator):
         self.sign_up.click_close()
         time.sleep(2)
         title = self.driver.title
+        assert title == "STORE"
         super().tear_down()
-        if title == "STORE":
-            assert True
-        else:
-            assert False

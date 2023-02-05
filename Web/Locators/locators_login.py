@@ -10,6 +10,6 @@ class login_locator:
     password = "yonasamare7"
     empty_username = ""
     empty_password = ""
-    invalid_username = "##$$^#"
-    invalid_password = "??????"
+    invalid_username = "1111111111eeeee"
+    invalid_password = "*&*&"
 
